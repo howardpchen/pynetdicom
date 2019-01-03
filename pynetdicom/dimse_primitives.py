@@ -63,7 +63,8 @@ class DIMSEPrimitive(object):
 
         if value is not None and not value.is_valid:
             LOGGER.error("Affected SOP Class UID is an invalid UID")
-            raise ValueError("Affected SOP Class UID is an invalid UID")
+            LOGGER.error(value)
+            #raise ValueError("Affected SOP Class UID is an invalid UID")
 
         self._affected_sop_class_uid = value
 
